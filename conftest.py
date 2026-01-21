@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 @pytest.fixture(scope="session")
-def posts_test_data():
-    with open("data/posts_test_data.json") as f:
+def get_posts_test_data():
+    with open("data/get_posts_test_data.json") as f:
         return json.load(f)
 
 

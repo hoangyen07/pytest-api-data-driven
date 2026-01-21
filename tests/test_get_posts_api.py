@@ -13,8 +13,8 @@ client = APIClient()
 logger = logging.getLogger(__name__)
 
 
-def test_posts_api(posts_test_data):
-    for test in posts_test_data:
+def test_get_posts_api(get_posts_test_data):
+    for test in get_posts_test_data:
         response = client.get(test["endpoint"])
     assert_status_code(response, test["expected_status"])
 
