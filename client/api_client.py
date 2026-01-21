@@ -1,5 +1,7 @@
 import requests
 from config.config import BASE_URL, TIMEOUT
+import logging
+logger = logging.getLogger(__name__)
 
 
 class APIClient:
@@ -9,3 +11,7 @@ class APIClient:
             params=params,
             timeout=TIMEOUT
         )
+    
+    def get_posts(self):
+        logger.info("GET /posts")
+        logger.debug("Sending request to jsonplaceholder")
